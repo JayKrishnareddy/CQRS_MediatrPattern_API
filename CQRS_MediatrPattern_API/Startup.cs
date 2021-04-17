@@ -1,4 +1,5 @@
 using CQRS_MediatrPattern_API.Data;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -34,6 +35,7 @@ namespace CQRS_MediatrPattern_API
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "CQRS_MediatrPattern_API", Version = "v1" });
             });
             services.AddSingleton<Repository>();
+            services.AddMediatR(typeof(Startup).Assembly);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
