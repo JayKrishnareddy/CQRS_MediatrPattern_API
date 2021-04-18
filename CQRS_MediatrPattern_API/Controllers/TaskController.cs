@@ -1,4 +1,5 @@
-﻿using CQRS_MediatrPattern_API.Queries;
+﻿using CQRS_MediatrPattern_API.Data;
+using CQRS_MediatrPattern_API.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -23,5 +24,7 @@ namespace CQRS_MediatrPattern_API.Controllers
             var result = await _mediatr.Send(new GetData.Query(Id));
             return result != null ? Ok(result) : NotFound();
         }
+        [HttpPost("")]
+        public async Task<IActionResult> GetDatabyId(AddData.Command command) => Ok(await _mediatr.Send(command));
     }
 }
