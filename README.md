@@ -1,9 +1,9 @@
 ## CQRS With MediatR In .NET 5 
 
 ### Topics Covered?
-- What is CQRS
-- What is MediatR
-- Implementation in .Net 5
+- Brief about CQRS?
+- What is MediatR?
+- Implementation in .Net 5 (API)
 - Testing the Solution with Swagger  
 
 
