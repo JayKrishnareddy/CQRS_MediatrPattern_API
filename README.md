@@ -1,6 +1,6 @@
 ## CQRS With MediatR In .NET 5 
 
-### Topics Covered?
+### Topics Covered in this Project?
 - Brief about CQRS?
 - What is MediatR?
 - Implementation in .Net 5 (API)
